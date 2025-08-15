@@ -1,0 +1,113 @@
+/* Form Styling
+
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+fieldset {
+  background: #fff;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 16px;
+  
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: #444;
+}
+
+input[type="text"],
+input[type="radio"] {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 15px;
+  margin-bottom: 16px;
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #6200ea;
+  outline: none;
+}
+
+input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+.input-gender{
+  display: flex;
+  gap: 20px;
+}
+.basic-inputs{
+  width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+fieldset {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+legend {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6200ea;
+}
+
+
+button {
+  background: #6200ea;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #4b00b3;
+}
+
+
+.toggle-button {
+  background-color: #ffa726;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.toggle-button:hover {
+  background-color: #fb8c00;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.action-buttons button {
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 8px;
+} */
+
+.disable{
+  cursor: not-allowed;
+}

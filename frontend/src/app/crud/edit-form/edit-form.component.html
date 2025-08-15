@@ -1,0 +1,163 @@
+<div class="form">
+
+<!-- <h1 style="margin-bottom: 30px;">Personal Data Portfolio</h1> -->
+
+<fieldset>
+  <legend>Basic Info</legend>
+
+<div class="basic-inputs">
+<label for="firstname">First Name:</label>
+<input
+  type="text"
+  name=""
+  id=""
+  placeholder="enter first name..."
+  required
+  [(ngModel)]="form.firstname"
+  #fnameRef="ngModel"
+/>
+<div *ngIf="form.firstname=='' && fnameRef.touched" class="error-text">Please enter First Name</div>
+</div>
+<div class="basic-inputs">
+<label for="lname">Last Name:</label>
+<input
+  type="text"
+  name=""
+  id=""
+  placeholder="enter last name..."
+  required
+  [(ngModel)]="form.lastname"
+  #lnameRef="ngModel"
+/>
+<div *ngIf="form.lastname=='' && lnameRef.touched" class="error-text">Please enter last Name</div>
+</div>
+<div class="basic-inputs">
+<label for="phone">Phone No:</label
+><input
+  type="text"
+  placeholder="Enter Phone Number..."
+  [(ngModel)]="form.phone"
+  [disabled]="!phoneID"
+  ngClass="phoneID ? disable : none"
+  #phoneRef="ngModel"
+/>
+<div *ngIf="form.phone=='' && phoneRef.touched" class="error-text">Please enter Phone Number</div>
+</div>
+<div class="basic-inputs">
+<label for="age">Age:</label
+><input type="text" placeholder="Enter your age..." [(ngModel)]="form.age" #ageRef="ngModel" />
+<div *ngIf="form.age=='' && ageRef.touched" class="error-text">Please enter age</div>
+</div>
+<div class="input-gender">
+<label>Gender:</label>
+<input
+  type="radio"
+  name="gender"
+  id="male"
+  value="Male"
+  [(ngModel)]="form.gender"
+  style="cursor: pointer"
+  #genderRef="ngModel"
+/>
+<label for="male">Male</label>
+
+<input
+  type="radio"
+  name="gender"
+  id="female"
+  value="Female"
+  [(ngModel)]="form.gender"
+  style="cursor: pointer"
+  #genderRef="ngModel"
+/>
+<label for="female">Female</label>
+<div *ngIf="form.gender=='' && genderRef.touched" class="error-text">
+  Please select a gender
+</div>
+</div>
+</fieldset>
+<br />
+<fieldset>
+  <legend>Address</legend>
+  <label for="country">Country:</label
+  ><input
+    type="text"
+    name=""
+    id=""
+    placeholder="enter country..."
+    required
+    [(ngModel)]="form.address.country"
+    #countryRef="ngModel"
+  />
+  <div *ngIf="form.address.country=='' && countryRef.touched" class="error-text">Please enter country</div>
+
+  <label for="state">State:</label
+  ><input
+    type="text"
+    name=""
+    id=""
+    placeholder="enter state..."
+    required
+    [(ngModel)]="form.address.state"
+    #stateRef="ngModel"
+  />
+  <div *ngIf="form.address.state=='' && stateRef.touched" class="error-text">Please enter state</div>
+
+  <label for="city">City:</label
+  ><input
+    type="text"
+    name=""
+    id=""
+    placeholder="enter city..."
+    required
+    [(ngModel)]="form.address.city"
+    #cityRef="ngModel"
+  />
+  <div *ngIf="form.address.city=='' && cityRef.touched" class="error-text">Please enter city</div>
+
+  <label for="Street">Street No:</label
+  ><input
+    type="text"
+    name=""
+    id=""
+    placeholder="enter street No..."
+    required
+    [(ngModel)]="form.address.street"
+    #streetRef="ngModel"
+  />
+  <div *ngIf="form.address.street=='' && streetRef.touched" class="error-text">Please enter street</div>
+
+  <label for="house">House:</label
+  ><input
+    type="text"
+    name=""
+    id=""
+    placeholder="enter house..."
+    required
+    [(ngModel)]="form.address.house"
+    #houseRef="ngModel"
+  />
+  <div *ngIf="form.address.house=='' && houseRef.touched" class="error-text">Please enter house</div>
+
+  <label for="postalcode">Postal Code:</label
+  ><input
+    type="text"
+    name=""
+    id=""
+    placeholder="enter Postal Code..."
+    required
+    [(ngModel)]="form.address.postalcode"
+    #pcRef="ngModel"
+  />
+  <div *ngIf="form.address.postalcode=='' && pcRef.touched" class="error-text">Please enter postal code</div>
+
+</fieldset>
+<div *ngIf="!formvalid()" style="font-size: 28px; color: red; margin-bottom: 10px;">Fill all entries to submit data</div>
+<button [disabled]="!formvalid()" (click)="submit()">Submit</button>
+
+<div style="width: 100%; text-align: right; margin-bottom: 10px;">
+  <button (click)="cancel()" style="background-color: crimson;">X</button>
+</div>
+
+
+</div>
